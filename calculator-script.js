@@ -13,11 +13,10 @@ const button_calculate = document.getElementById('button-calculate');
 
 // listeners
 
-button_plus.addEventListener('click', onButtonPlusClick);
-button_minus.addEventListener('click', onButtonMinusClick);
-button_multiply.addEventListener('click', onButtonMultiplyClick);
-button_divide.addEventListener('click', onButtonDivideClick);
-button_calculate.addEventListener('click', makeOperation);
+button_plus.addEventListener('click', onOperationButtonClick);
+button_minus.addEventListener('click', onOperationButtonClick);
+button_multiply.addEventListener('click', onOperationButtonClick);
+button_divide.addEventListener('click', onOperationButtonClick);
 
 
 // functions
@@ -48,22 +47,27 @@ const number2 = Number(input2.value);
     }     
 }
 
-function onButtonPlusClick() {
-    makeOperation('+');
+// function onButtonPlusClick() {
+//     makeOperation('+');
+// }
+
+// function onButtonMinusClick() {
+//     makeOperation('-');
+// }
+
+// function onButtonMultiplyClick() {
+//     makeOperation('*');
+// }
+
+// function onButtonDivideClick() {
+//     makeOperation('/');
+// }
+
+// INFO - eventObject це те що створюється і передається браузером при виникненні події.
+// З нього ми можемо отримати інформацію про те, яка саме кнопка була натиснута і інші деталі події.
+
+function onOperationButtonClick(eventObject) {
+    const clickedButton = eventObject.currentTarget;
+    const operator = clickedButton.innerHTML;
+    makeOperation(operator);
 }
-
-function onButtonMinusClick() {
-    makeOperation('-');
-}
-
-function onButtonMultiplyClick() {
-    makeOperation('*');
-}
-
-function onButtonDivideClick() {
-    makeOperation('/');
-}
-
-
-
-
