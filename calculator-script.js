@@ -5,12 +5,14 @@ const input2 = document.getElementById('input-second-number');
 
 // buttons
 
-const operationButtons = [
-    document.getElementById('button-plus'),
-    document.getElementById('button-minus'),
-    document.getElementById('button-multiply'),
-    document.getElementById('button-divide')
-]
+// const operationButtons = [
+//     document.getElementById('button-plus'),
+//     document.getElementById('button-minus'),
+//     document.getElementById('button-multiply'),
+//     document.getElementById('button-divide')
+// ]
+
+const operationButtons = document.getElementsByClassName('operation-button');
 
 // const button_plus = document.getElementById('button-plus');
 // const button_minus = document.getElementById('button-minus');
