@@ -5,19 +5,29 @@ const input2 = document.getElementById('input-second-number');
 
 // buttons
 
-const button_plus = document.getElementById('button-plus');
-const button_minus = document.getElementById('button-minus');
-const button_multiply = document.getElementById('button-multiply');
-const button_divide = document.getElementById('button-divide');
-const button_calculate = document.getElementById('button-calculate');
+const operationButtons = [
+    document.getElementById('button-plus'),
+    document.getElementById('button-minus'),
+    document.getElementById('button-multiply'),
+    document.getElementById('button-divide')
+]
+
+// const button_plus = document.getElementById('button-plus');
+// const button_minus = document.getElementById('button-minus');
+// const button_multiply = document.getElementById('button-multiply');
+// const button_divide = document.getElementById('button-divide');
+
 
 // listeners
 
-button_plus.addEventListener('click', onOperationButtonClick);
-button_minus.addEventListener('click', onOperationButtonClick);
-button_multiply.addEventListener('click', onOperationButtonClick);
-button_divide.addEventListener('click', onOperationButtonClick);
+// operationButtons[0].addEventListener('click', onOperationButtonClick);
+// operationButtons[1].addEventListener('click', onOperationButtonClick);
+// operationButtons[2].addEventListener('click', onOperationButtonClick);
+// operationButtons[3].addEventListener('click', onOperationButtonClick);
 
+for (let index = 0; index < operationButtons.length; index++) {
+operationButtons[index].addEventListener('click', onOperationButtonClick);
+}
 
 // functions
 
